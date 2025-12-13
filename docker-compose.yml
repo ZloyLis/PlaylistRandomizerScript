@@ -1,0 +1,9 @@
+services:
+  rename-tracks:
+    image: python:3.11-slim
+    container_name: playlist-randomizer
+    working_dir: /app
+    volumes:
+      - .:/app
+      - D:\\SharingFolder\\Музыка\\Минусовки\\тестирование:/music:rw
+    command: python main.py
